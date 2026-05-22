@@ -1,0 +1,46 @@
+.sidebar {
+  width: 260px;
+  background: darkslategrey;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  background: #d9d9d9;
+  border-radius: 50%;
+}
+
+.brand h2 {
+  font-size: 22px;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu li:hover {
+  background: #3c3f45;
+}
+
+.active {
+  background: #3c3f45;
+}

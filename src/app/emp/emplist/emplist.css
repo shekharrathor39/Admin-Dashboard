@@ -1,0 +1,198 @@
+/* =========================
+   PAGE BACKGROUND
+========================= */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f5f9;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  overflow-x: auto;
+}
+
+/* =========================
+   TOOLBAR
+========================= */
+
+mat-toolbar {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8) !important;
+  color: white;
+  padding: 0 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+/* =========================
+   ADD EMPLOYEE BUTTON
+========================= */
+
+button[mat-raised-button] {
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 8px 18px;
+}
+
+/* =========================
+   SEARCH FIELD
+========================= */
+
+mat-form-field {
+  width: 320px;
+  margin: 20px;
+}
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+
+.mat-elevation-z8 {
+  width: 95%;
+  margin: 20px auto;
+  border-radius: 16px;
+  background: white;
+
+  overflow-x: auto;
+  overflow-y: auto;
+
+  max-height: 500px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+  width: 100%;
+  min-width: 1200px;
+  border-collapse: collapse;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+th.mat-mdc-header-cell {
+  background: #1e40af;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 16px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* =========================
+   TABLE CELLS
+========================= */
+
+td.mat-mdc-cell {
+  padding: 14px;
+  font-size: 14px;
+  color: #374151;
+  white-space: nowrap;
+}
+
+/* =========================
+   ROW COLORS
+========================= */
+
+tr.mat-mdc-row:nth-child(even) {
+  background: #f8fafc;
+}
+
+tr.mat-mdc-row:nth-child(odd) {
+  background: #ffffff;
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+tr.mat-mdc-row:hover {
+  background: #dbeafe;
+  transition: 0.3s;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+button[color="primary"] {
+  background: #2563eb !important;
+  color: white !important;
+}
+
+button[color="warn"] {
+  background: #dc2626 !important;
+  color: white !important;
+}
+
+/* =========================
+   ICONS
+========================= */
+
+mat-icon {
+  font-size: 20px;
+}
+
+/* =========================
+   PAGINATOR
+========================= */
+
+mat-paginator {
+  background: #f1f5f9;
+  border-top: 1px solid #cbd5e1;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.mat-elevation-z8::-webkit-scrollbar {
+  height: 10px;
+}
+
+.mat-elevation-z8::-webkit-scrollbar-track {
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+.mat-elevation-z8::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  mat-form-field {
+    width: 90%;
+    margin: 15px;
+  }
+
+  .mat-elevation-z8 {
+    width: 98%;
+  }
+
+  table {
+    min-width: 1000px;
+  }
+
+  th.mat-mdc-header-cell,
+  td.mat-mdc-cell {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  button[mat-raised-button] {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
