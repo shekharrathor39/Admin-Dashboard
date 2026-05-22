@@ -1,0 +1,269 @@
+<mat-toolbar color="primary">
+
+  <span>CRUD Application</span>
+  <span class="example-spacer"></span>
+  <button mat-raised-button color="accent" (click)="OpenAddEditEpmForm()">ADD EMPLOYEE
+  </button>
+</mat-toolbar>
+<br>
+<mat-form-field appearance="outline">
+
+  <input
+    matInput
+    placeholder="Search Employee"
+    (keyup)="applyFilter($event)"
+    #input>
+
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    matSort>
+
+    <!-- ID -->
+
+    <ng-container matColumnDef="id">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        ID
+
+      </th>
+
+      <td mat-cell *matCellDef="let row" >
+
+        {{ row.id}}
+
+      </td>
+
+    </ng-container>
+
+    <!-- First Name -->
+
+    <ng-container matColumnDef="firstName">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        First Name
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        {{ row.firstName }}
+
+      </td>
+
+    </ng-container>
+
+    <!-- Last Name -->
+
+    <ng-container matColumnDef="lastName">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        Last Name
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        {{ row.lastName }}
+
+      </td>
+
+    </ng-container>
+
+    <!-- Email -->
+
+    <ng-container matColumnDef="email">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        Email
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        {{ row.email }}
+
+      </td>
+
+    </ng-container>
+
+    <!-- DOB -->
+
+    <ng-container matColumnDef="dob">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        DOB
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        {{ row.dob | date:'dd-MM-yyyy'}}
+
+      </td>
+
+    </ng-container>
+                                                                    
+    <!-- Gender -->
+
+    <ng-container matColumnDef="gender">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        Gender
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        {{ row.gender }}
+
+      </td>
+
+    </ng-container>
+
+    <!-- Education -->
+
+    <ng-container matColumnDef="education">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        Education
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        {{ row.education }}
+
+      </td>
+
+    </ng-container>
+
+    <!-- Company -->
+
+    <ng-container matColumnDef="company">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        Company
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        {{ row.company }}
+
+      </td>
+
+    </ng-container>
+
+    <!-- Experience -->
+
+    <ng-container matColumnDef="exprience">
+
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+
+        Experience
+
+      </th>
+
+      <td mat-cell *matCellDef="let row">
+
+        {{ row.experience }}
+
+      </td>
+
+    </ng-container>
+
+    <!-- Package -->
+
+    <ng-container matColumnDef="package">
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+        Package
+      </th>
+      <td mat-cell *matCellDef="let row">
+        {{ row.package |currency:"INR" }}L
+      </td>
+    </ng-container>
+
+    
+    <ng-container matColumnDef="action">
+      <th
+        mat-header-cell
+        *matHeaderCellDef
+        mat-sort-header>
+        action
+      </th>
+      <td mat-cell *matCellDef="let row">
+        <button mat-icon-button color="primary" (click)="OpenEditForm(row)">
+  <mat-icon>edit</mat-icon>
+</button>
+
+<button mat-icon-button color="warn" (click)="deleteemployee(row.id)">
+  <mat-icon>delete</mat-icon>
+</button>
+      </td>
+    </ng-container>
+
+
+
+
+    <tr
+      mat-header-row
+      *matHeaderRowDef="displayedColumns">
+    </tr>
+
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+
+  </table>
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page"> <DATA>EMPLOYEE DATA
+              </DATA>
+</mat-paginator>
+
+</div>

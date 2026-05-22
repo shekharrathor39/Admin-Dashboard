@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Product List</h2>
+
+  <div *ngFor="let product of products" class="card">
+    <h3>{{ product.title }}</h3>
+    
+    <p>{{ product.description }}</p>
+    
+    <p><strong>Price:</strong> ${{ product.price }}</p>
+
+    <img 
+      [src]="product.thumbnail" 
+      width="150"
+      (error)="product.thumbnail ='https://via.placeholder.com/150'"/>
+    <hr />
+  </div>
+</div>

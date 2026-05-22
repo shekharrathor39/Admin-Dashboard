@@ -1,0 +1,34 @@
+.header {
+  height: 70px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  border-bottom: 1px solid #ddd;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.lang {
+  font-size: 18px;
+}
+
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.lang select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+}
