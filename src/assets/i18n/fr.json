@@ -1,0 +1,27 @@
+{
+  "EMPLOYEE_FORM": "Formulaire Employé",
+  "UPDATE_FORM": "Mettre à Jour l'Employé",
+  "FIRST_NAME": "Prénom",
+  "LAST_NAME": "Nom",
+  "EMAIL": "E-mail",
+  "DOB": "Date de Naissance",
+  "GENDER": "Genre",
+  "MALE": "Homme",
+  "FEMALE": "Femme",
+  "OTHER": "Autre",
+  "EDUCATION": "Éducation",
+  "COMPANY": "Entreprise",
+  "EXPERIENCE": "Expérience",
+  "PACKAGE": "Salaire",
+  "SAVE": "Enregistrer",
+  "UPDATE": "Mettre à Jour",
+  "CANCEL": "Annuler",
+  "IN_RUPEES": "En roupies",
+
+  "FIRST_NAME_PLACEHOLDER": "Votre prénom",
+  "LAST_NAME_PLACEHOLDER": "Votre nom",
+  "EMAIL_PLACEHOLDER": "email@abc.com",
+  "COMPANY_PLACEHOLDER": "ex Microsoft",
+  "EXPERIENCE_PLACEHOLDER": "ex 5",
+  "PACKAGE_PLACEHOLDER": "ex 12 LPA"
+}

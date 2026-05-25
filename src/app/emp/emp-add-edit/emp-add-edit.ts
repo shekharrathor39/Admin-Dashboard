@@ -27,14 +27,17 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 /* FIXED IMPORT */
 import { EmpService } from '../../services/employee';
-import { MatPaginator } from '@angular/material/paginator';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-emp-add-edit',
   standalone: true,
 
   imports: [
     MatDialogContent,
-    MatPaginator,
+    MatPaginatorModule,
+    CommonModule,
+    TranslateModule,
     MatDialogActions,
     ReactiveFormsModule,
     MatSnackBarModule,

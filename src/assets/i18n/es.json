@@ -1,0 +1,27 @@
+{
+  "EMPLOYEE_FORM": "Formulario de Empleado",
+  "UPDATE_FORM": "Actualizar Empleado",
+  "FIRST_NAME": "Nombre",
+  "LAST_NAME": "Apellido",
+  "EMAIL": "Correo Electrónico",
+  "DOB": "Fecha de Nacimiento",
+  "GENDER": "Género",
+  "MALE": "Masculino",
+  "FEMALE": "Femenino",
+  "OTHER": "Otro",
+  "EDUCATION": "Educación",
+  "COMPANY": "Empresa",
+  "EXPERIENCE": "Experiencia",
+  "PACKAGE": "Paquete",
+  "SAVE": "Guardar",
+  "UPDATE": "Actualizar",
+  "CANCEL": "Cancelar",
+  "IN_RUPEES": "En rupias",
+
+  "FIRST_NAME_PLACEHOLDER": "Tu nombre",
+  "LAST_NAME_PLACEHOLDER": "Tu apellido",
+  "EMAIL_PLACEHOLDER": "email@abc.com",
+  "COMPANY_PLACEHOLDER": "ej. Microsoft",
+  "EXPERIENCE_PLACEHOLDER": "ej. 5",
+  "PACKAGE_PLACEHOLDER": "ej. 12 LPA"
+}

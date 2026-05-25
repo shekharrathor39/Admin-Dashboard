@@ -1,0 +1,27 @@
+{
+  "EMPLOYEE_FORM": "Mitarbeiterformular",
+  "UPDATE_FORM": "Mitarbeiter aktualisieren",
+  "FIRST_NAME": "Vorname",
+  "LAST_NAME": "Nachname",
+  "EMAIL": "E-Mail",
+  "DOB": "Geburtsdatum",
+  "GENDER": "Geschlecht",
+  "MALE": "Männlich",
+  "FEMALE": "Weiblich",
+  "OTHER": "Andere",
+  "EDUCATION": "Ausbildung",
+  "COMPANY": "Firma",
+  "EXPERIENCE": "Erfahrung",
+  "PACKAGE": "Gehalt",
+  "SAVE": "Speichern",
+  "UPDATE": "Aktualisieren",
+  "CANCEL": "Abbrechen",
+  "IN_RUPEES": "In Rupien",
+
+  "FIRST_NAME_PLACEHOLDER": "Ihr Vorname",
+  "LAST_NAME_PLACEHOLDER": "Ihr Nachname",
+  "EMAIL_PLACEHOLDER": "email@abc.com",
+  "COMPANY_PLACEHOLDER": "z.B. Microsoft",
+  "EXPERIENCE_PLACEHOLDER": "z.B. 5",
+  "PACKAGE_PLACEHOLDER": "z.B. 12 LPA"
+}

@@ -1,0 +1,27 @@
+{
+  "EMPLOYEE_FORM": "Employee Form",
+  "UPDATE_FORM": "Employee Update Form",
+  "FIRST_NAME": "First Name",
+  "LAST_NAME": "Last Name",
+  "EMAIL": "Email",
+  "DOB": "Date of Birth",
+  "GENDER": "Gender",
+  "MALE": "Male",
+  "FEMALE": "Female",
+  "OTHER": "Other",
+  "EDUCATION": "Education",
+  "COMPANY": "Company",
+  "EXPERIENCE": "Experience",
+  "PACKAGE": "Package",
+  "SAVE": "Save",
+  "UPDATE": "Update",
+  "CANCEL": "Cancel",
+  "IN_RUPEES": "In rupees",
+
+  "FIRST_NAME_PLACEHOLDER": "Your first name",
+  "LAST_NAME_PLACEHOLDER": "Your last name",
+  "EMAIL_PLACEHOLDER": "email@abc.com",
+  "COMPANY_PLACEHOLDER": "ex microsoft",
+  "EXPERIENCE_PLACEHOLDER": "ex 5",
+  "PACKAGE_PLACEHOLDER": "ex 12 lpa"
+}

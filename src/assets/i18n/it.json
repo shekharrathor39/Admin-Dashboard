@@ -1,0 +1,27 @@
+{
+  "EMPLOYEE_FORM": "Modulo Dipendente",
+  "UPDATE_FORM": "Aggiorna Dipendente",
+  "FIRST_NAME": "Nome",
+  "LAST_NAME": "Cognome",
+  "EMAIL": "Email",
+  "DOB": "Data di Nascita",
+  "GENDER": "Genere",
+  "MALE": "Maschio",
+  "FEMALE": "Femmina",
+  "OTHER": "Altro",
+  "EDUCATION": "Istruzione",
+  "COMPANY": "Azienda",
+  "EXPERIENCE": "Esperienza",
+  "PACKAGE": "Pacchetto",
+  "SAVE": "Salva",
+  "UPDATE": "Aggiorna",
+  "CANCEL": "Annulla",
+  "IN_RUPEES": "In rupie",
+
+  "FIRST_NAME_PLACEHOLDER": "Il tuo nome",
+  "LAST_NAME_PLACEHOLDER": "Il tuo cognome",
+  "EMAIL_PLACEHOLDER": "email@abc.com",
+  "COMPANY_PLACEHOLDER": "es. Microsoft",
+  "EXPERIENCE_PLACEHOLDER": "es. 5",
+  "PACKAGE_PLACEHOLDER": "es. 12 LPA"
+}

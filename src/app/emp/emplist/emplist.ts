@@ -15,6 +15,7 @@ import { CurrencyPipe, DatePipe } from '@angular/common';
 import { EmpService } from '../../services/employee';
 import { EmpAddEdit } from '../../emp/emp-add-edit/emp-add-edit';
 import { DialogRef } from '@angular/cdk/dialog';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-emplist',
   
@@ -22,6 +23,7 @@ import { DialogRef } from '@angular/cdk/dialog';
     MatSnackBarModule,
     MatToolbarModule,
     MatIconModule,
+    TranslateModule,
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,

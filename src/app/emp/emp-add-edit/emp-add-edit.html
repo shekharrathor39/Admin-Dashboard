@@ -1,7 +1,7 @@
 <div mat-dialog-title>
 
   <h1>
-    {{ data ? 'Employee Update Form' : 'Employee Form' }}
+    {{ data ? ('UPDATE_FORM' | translate) : ('EMPLOYEE_FORM' | translate) }}
   </h1>
 
 </div>
@@ -16,22 +16,22 @@
 
       <mat-form-field appearance="outline">
 
-        <mat-label>First Name</mat-label>
+        <mat-label>{{ 'FIRST_NAME' | translate }}</mat-label>
 
         <input
           matInput
-          placeholder="Your first name"
+          [placeholder]="'FIRST_NAME_PLACEHOLDER' | translate"
           formControlName="firstName">
 
       </mat-form-field>
 
       <mat-form-field appearance="outline">
 
-        <mat-label>Last Name</mat-label>
+        <mat-label>{{ 'LAST_NAME' | translate }}</mat-label>
 
         <input
           matInput
-          placeholder="Your last name"
+          [placeholder]="'LAST_NAME_PLACEHOLDER' | translate"
           formControlName="lastName">
 
       </mat-form-field>
@@ -44,18 +44,18 @@
 
       <mat-form-field appearance="outline">
 
-        <mat-label>Email</mat-label>
+        <mat-label>{{ 'EMAIL' | translate }}</mat-label>
 
         <input
           matInput
-          placeholder="email@abc.com"
+          [placeholder]="'EMAIL_PLACEHOLDER' | translate"
           formControlName="email">
 
       </mat-form-field>
 
       <mat-form-field appearance="outline">
 
-        <mat-label>Date of birth</mat-label>
+        <mat-label>{{ 'DOB' | translate }}</mat-label>
 
         <input
           matInput
@@ -79,7 +79,7 @@
 
       <label class="gender-label">
 
-        <b>Gender *</b>
+        <b>{{ 'GENDER' | translate }}</b>
 
       </label>
 
@@ -88,15 +88,15 @@
         formControlName="gender">
 
         <mat-radio-button value="male">
-          Male
+          {{ 'MALE' | translate }}
         </mat-radio-button>
 
         <mat-radio-button value="female">
-          Female
+          {{ 'FEMALE' | translate }}
         </mat-radio-button>
 
         <mat-radio-button value="other">
-          Other
+          {{ 'OTHER' | translate }}
         </mat-radio-button>
 
       </mat-radio-group>
@@ -109,7 +109,7 @@
 
       <mat-form-field appearance="outline">
 
-        <mat-label>Education</mat-label>
+        <mat-label>{{ 'EDUCATION' | translate }}</mat-label>
 
         <mat-select formControlName="education">
 
@@ -133,11 +133,11 @@
 
       <mat-form-field appearance="outline">
 
-        <mat-label>Company</mat-label>
+        <mat-label>{{ 'COMPANY' | translate }}</mat-label>
 
         <input
           matInput
-          placeholder="ex microsoft"
+          [placeholder]="'COMPANY_PLACEHOLDER' | translate"
           formControlName="company">
 
       </mat-form-field>
@@ -150,27 +150,27 @@
 
       <mat-form-field appearance="outline">
 
-        <mat-label>Experience</mat-label>
+        <mat-label>{{ 'EXPERIENCE' | translate }}</mat-label>
 
         <input
           matInput
           type="number"
-          placeholder="ex 5"
+          [placeholder]="'EXPERIENCE_PLACEHOLDER' | translate"
           formControlName="experience">
 
       </mat-form-field>
 
       <mat-form-field appearance="outline">
 
-        <mat-label>Package</mat-label>
+        <mat-label>{{ 'PACKAGE' | translate }}</mat-label>
 
         <input
           matInput
           type="number"
-          placeholder="ex 12 lpa"
+          [placeholder]="'PACKAGE_PLACEHOLDER' | translate"
           formControlName="package">
 
-        <mat-hint>In rupees</mat-hint>
+        <mat-hint>{{ 'IN_RUPEES' | translate }}</mat-hint>
 
       </mat-form-field>
 
@@ -187,7 +187,7 @@
       type="button"
       mat-dialog-close>
 
-      Cancel
+      {{ 'CANCEL' | translate }}
 
     </button>
 
@@ -196,7 +196,7 @@
       color="primary"
       type="submit">
 
-      {{ data ? 'Update' : 'Save' }}
+      {{ data ? ('UPDATE' | translate) : ('SAVE' | translate) }}
 
     </button>
 

@@ -7,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   selector: 'app-view',
   templateUrl: './view.html',
   styleUrls: ['./view.css'],
+  standalone:true,
   imports:[CommonModule,ReactiveFormsModule]
 })
 
