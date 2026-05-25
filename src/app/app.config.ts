@@ -1,8 +1,7 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, importProvidersFrom } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
-import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { Observable, of } from 'rxjs';
 import { routes } from './app.routes';
@@ -23,7 +22,7 @@ export class StaticTranslateLoader implements TranslateLoader {
         FIRST_NAME_PLACEHOLDER: 'Enter first name', LAST_NAME_PLACEHOLDER: 'Enter last name',
         EMAIL_PLACEHOLDER: 'Enter email', COMPANY_PLACEHOLDER: 'Enter company',
         EXPERIENCE_PLACEHOLDER: 'Enter experience', PACKAGE_PLACEHOLDER: 'Enter package',
-        IN_RUPEES: 'In Rupees (LPA)'
+        IN_RUPEES: 'In Rupees (LPA)', LOGOUT: 'Logout'
       },
       de: {
         WELCOME: 'Willkommen', LANGUAGE: 'Sprache', DASHBOARD: 'Armaturenbrett',
@@ -38,7 +37,7 @@ export class StaticTranslateLoader implements TranslateLoader {
         FIRST_NAME_PLACEHOLDER: 'Vornamen eingeben', LAST_NAME_PLACEHOLDER: 'Nachnamen eingeben',
         EMAIL_PLACEHOLDER: 'E-Mail eingeben', COMPANY_PLACEHOLDER: 'Unternehmen eingeben',
         EXPERIENCE_PLACEHOLDER: 'Erfahrung eingeben', PACKAGE_PLACEHOLDER: 'Paket eingeben',
-        IN_RUPEES: 'In Rupien (LPA)'
+        IN_RUPEES: 'In Rupien (LPA)', LOGOUT: 'Abmelden'
       },
       fr: {
         WELCOME: 'Bienvenue', LANGUAGE: 'Langue', DASHBOARD: 'Tableau de bord',
@@ -53,7 +52,7 @@ export class StaticTranslateLoader implements TranslateLoader {
         FIRST_NAME_PLACEHOLDER: 'Entrer le prénom', LAST_NAME_PLACEHOLDER: 'Entrer le nom',
         EMAIL_PLACEHOLDER: 'Entrer l\'email', COMPANY_PLACEHOLDER: 'Entrer l\'entreprise',
         EXPERIENCE_PLACEHOLDER: 'Entrer l\'expérience', PACKAGE_PLACEHOLDER: 'Entrer le package',
-        IN_RUPEES: 'En roupies (LPA)'
+        IN_RUPEES: 'En roupies (LPA)', LOGOUT: 'Déconnexion'
       },
       it: {
         WELCOME: 'Benvenuto', LANGUAGE: 'Lingua', DASHBOARD: 'Pannello',
@@ -68,7 +67,7 @@ export class StaticTranslateLoader implements TranslateLoader {
         FIRST_NAME_PLACEHOLDER: 'Inserisci nome', LAST_NAME_PLACEHOLDER: 'Inserisci cognome',
         EMAIL_PLACEHOLDER: 'Inserisci email', COMPANY_PLACEHOLDER: 'Inserisci azienda',
         EXPERIENCE_PLACEHOLDER: 'Inserisci esperienza', PACKAGE_PLACEHOLDER: 'Inserisci pacchetto',
-        IN_RUPEES: 'In rupie (LPA)'
+        IN_RUPEES: 'In rupie (LPA)', LOGOUT: 'Esci'
       },
       es: {
         WELCOME: 'Bienvenido', LANGUAGE: 'Idioma', DASHBOARD: 'Panel de control',
@@ -83,7 +82,7 @@ export class StaticTranslateLoader implements TranslateLoader {
         FIRST_NAME_PLACEHOLDER: 'Ingrese nombre', LAST_NAME_PLACEHOLDER: 'Ingrese apellido',
         EMAIL_PLACEHOLDER: 'Ingrese correo', COMPANY_PLACEHOLDER: 'Ingrese empresa',
         EXPERIENCE_PLACEHOLDER: 'Ingrese experiencia', PACKAGE_PLACEHOLDER: 'Ingrese paquete',
-        IN_RUPEES: 'En rupias (LPA)'
+        IN_RUPEES: 'En rupias (LPA)', LOGOUT: 'Cerrar sesión'
       }
     };
     return of(translations[lang] || translations['en']);
@@ -94,9 +93,8 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),
-    provideClientHydration(withEventReplay()),
     provideAnimations(),
-    provideHttpClient(),
+    provideHttpClient(withFetch()),   // ← withFetch fixes CSP issue
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {

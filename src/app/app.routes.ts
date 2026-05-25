@@ -6,24 +6,25 @@ import { Emplist } from './emp/emplist/emplist';
 import { EmpAddEdit } from './emp/emp-add-edit/emp-add-edit';
 import { ProductsComponent } from './component/product/product';
 import { ViewComponent } from './component/view/view';
+import { AuthGuard } from './guards/auth.guard/auth.guard';
+import { LoginGuard } from './guards/login.guard/login.guard';
+
 
 export const routes: Routes = [
-  { path: 'create', component: EmpAddEdit },
-  { path: 'update', component: EmpAddEdit },
-  { path: 'login', component: LoginComponent },
-  // { path:'',redirectTo:'login',pathMatch:'full'},
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'create', component: EmpAddEdit, canActivate: [AuthGuard] },
+  { path: 'update', component: EmpAddEdit, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent, canActivate: [LoginGuard] },
   {
     path: 'dashboard',
     component: MainLayoutComponent,
+    canActivate: [AuthGuard],
     children: [
-      // {path:'',redirectTo:'dashboard',},
       { path: '', component: DashboardComponent },
-      { path: 'emplist', component:  Emplist},
+      { path: 'emplist', component: Emplist },
       { path: 'product', component: ProductsComponent },
-      { path: 'view', component: ViewComponent},
+      { path: 'view', component: ViewComponent },
     ]
   },
-
   { path: '**', redirectTo: 'login' }
-
 ];
